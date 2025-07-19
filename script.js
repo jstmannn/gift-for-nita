@@ -1,12 +1,10 @@
 const message = `Halo Nita, aku seneng bisa kenal kamu dan mabar sama kamu siang ini.\n\nAku mau kasih tau kamu duniaku...\n\nDunia aku terlalu sempit dan jarang orang bisa kenal aku lebih jauh.\n\n Aku harap datangnya kamu bukan cuma sementara karena aku juga butuh someone to talk. \n\nAku juga seneng kalo bisa dapet temen mabar dan selalu contact-an.\n\nJadi, kamu bisa hubungin aku kapanpun kamu butuh, aku mau jadi apapun yg kamu butuhin nantinya.`;
 
 function showLetter() {
-  const music = document.getElementById("bgMusic");
-  music.play();
-
   document.getElementById("introText").style.opacity = 0;
   document.querySelector(".btn").style.display = "none";
-
+ const music = document.getElementById("bgMusic");
+  music.play();
   setTimeout(() => {
     const letterBox = document.getElementById("letterBox");
     const typedText = document.getElementById("typedText");
@@ -19,8 +17,8 @@ function showLetter() {
         i++;
         setTimeout(typeWriter, 50);
       } else {
-        // Setelah selesai mengetik, tampilkan tombol Instagram
-        showInstagramButton();
+        // Setelah selesai ketik, tampilkan tombol WhatsApp
+        showWhatsAppButton();
       }
     }
 
@@ -35,5 +33,5 @@ function showInstagramButton() {
   igButton.className = "wa-button"; // Jika punya style khusus IG, bisa diganti ke "ig-button"
   igButton.textContent = "Klik disini buat contact aku";
 
-  document.getElementById("letterBox").appendChild(igButton);
+  document.getElementById("letterBox").appendChild(waButton);
 }
